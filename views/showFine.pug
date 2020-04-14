@@ -1,0 +1,11 @@
+h1 YOUR FINE IS 
+   - let sum = 0
+   each r in foundData
+    div your Details 
+        div book Id
+        div= r.book_id
+        div Your fine on this book
+        div= r.fine
+        - sum+= r.fine 
+   h5= `Your total fine is ${sum}`
+a(href="/")  GO BACK
