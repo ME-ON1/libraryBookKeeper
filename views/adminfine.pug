@@ -1,0 +1,12 @@
+h1 hey admin this is every pending file
+    each val in foundData
+      each key in val
+         div= key
+      
+      form(method="DELETE" action=`/${val.s_no}/clear`)
+           button Clear Fine
+      form(method="PUT" action=`/${val.s_no}/change`)
+           button MODIFY SETTING
+
+
+button(type="submit" href="/logout") LOGOUT

@@ -1,17 +1,9 @@
 let mysql = require("mysql"),
     local = require("passport-local-mysql")
+    dbconfig = require("../createdb/createConn")
 
-
-var myConnection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'toor',
-    database : 'library_fine',
-    multipleStatements: true
-  });
-
-
-  myConnection.connect((err)=>{
+var myConnection = mysql.createConnection(dbconfig.connection);
+myConnection.connect((err)=>{
       if(err){
           console.log(err);
           

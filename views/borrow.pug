@@ -4,6 +4,6 @@ form(method="post" action="/borrow")
    label Book ID 
        input(type="text" name="bookID") 
    label YOUR Roll NO.
-       input(type="text" name="rollno")
+       input(type="text" name="rollno" value=`${row.univ_rollno}`)
    button(type="SUBMIT") SUBMIT   
 a(href="/info") want to know fine 

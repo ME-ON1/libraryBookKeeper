@@ -1,4 +1,4 @@
-h1 YOUR FINE IS 
+h1 #{currentUser.univ_rollno} Profile
    - let sum = 0
    each r in foundData
     div your Details 
@@ -8,4 +8,6 @@ h1 YOUR FINE IS
         div= r.fine
         - sum+= r.fine 
    h5= `Your total fine is ${sum}`
-a(href="/")  GO BACK
+a(href="/" +currentUser.id + "/borrow")  You wanna borrow another book 
+   
+a(href="/login")  GO BACK
